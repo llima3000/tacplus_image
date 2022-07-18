@@ -21,14 +21,16 @@ docker run -td --name tacplus -p 49:49 \
        tacplus
 ```
 
-### DFEbug opttions to tun the container
+### Debug options to run the container
 
-The container new has debug enabled by default for the tacplus service. The default level is 32 and it can be changed adding the environment variable DEBUGLEVEL with the desired eug level, as the follwing example
+The container now has debug enabled by default for the tacplus service. The default level is 32 and it can be changed adding the environment variable DEBUGLEVEL with the desired eug level, as the follwing example
 ```
 docker run -td --name tacplus -p 49:49 -e DEBUGLEVEL=64 \
        -v <tacplus local cfg file>:/etc/tacacs+/tac_plus.conf \
        tacplus
 ```
+More info about the service and debug in https://manpages.ubuntu.com/manpages/bionic/man8/tac_plus.8.html
+More info about the config file in https://manpages.ubuntu.com/manpages/bionic/man5/tac_plus.conf.5.html
 
 See also a python client for test and programming
 https://github.com/ansible/tacacs_plus
