@@ -16,4 +16,6 @@ RUN apt-get update && \
     apt-get clean
 
 EXPOSE 49
-ENTRYPOINT service tacacs_plus restart && bash
+ENV DEBUGLEVEL=32
+#ENTRYPOINT service tacacs_plus restart && bash
+ENTRYPOINT /usr/sbin/tac_plus -G -t -d ${DEBUGLEVEL} -C /etc/tacacs+/tac_plus.conf
