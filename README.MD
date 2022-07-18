@@ -29,3 +29,6 @@ docker run -td --name tacplus -p 49:49 -e DEBUGLEVEL=64 \
        -v <tacplus local cfg file>:/etc/tacacs+/tac_plus.conf \
        tacplus
 ```
+
+See also a python client for test and programming
+https://github.com/ansible/tacacs_plus
